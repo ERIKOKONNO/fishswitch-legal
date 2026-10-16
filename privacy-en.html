@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sakana Switch Privacy Policy</title>
+  <link rel="alternate" hreflang="ja" href="https://erikokonno.github.io/fishswitch-legal/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://erikokonno.github.io/fishswitch-legal/privacy-en.html">
+  <style>
+    :root {
+      color: #13384f;
+      background: #eef8fa;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      line-height: 1.8;
+    }
+    body { margin: 0; }
+    main {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+    article {
+      background: #fff;
+      border: 1px solid #d7eef2;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(15, 163, 168, .08);
+    }
+    h1 { margin: 0 0 8px; color: #0f576b; font-size: 30px; line-height: 1.3; }
+    h2 { margin: 32px 0 8px; color: #0f576b; font-size: 20px; }
+    h3 { margin: 24px 0 8px; color: #0f576b; font-size: 17px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 22px; }
+    .updated { color: #6f8596; margin-top: 0; }
+    .lang { margin: 0 0 16px; font-size: 14px; text-align: right; }
+    .note {
+      background: #edfafa;
+      border-left: 5px solid #0fa3a8;
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    a { color: #0a8f95; }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <p class="lang"><a href="./privacy.html" hreflang="ja" lang="ja">日本語</a> | English</p>
+      <h1>Sakana Switch Privacy Policy</h1>
+      <p class="updated">Effective: 4 June 2026 / Last updated: 15 October 2026</p>
+
+      <p class="note">
+        Sakana Switch (魚スイッチ in Japanese) is an app that helps you plan fishing trips and keep a log of them.
+        As a rule, your fishing records and favourite spots are stored on your device.
+      </p>
+
+      <h2>1. Information we use</h2>
+      <p>To provide the app's features, the app may use the following information:</p>
+      <ul>
+        <li>Information you save in the app, such as favourite spots, the selected fishing spot, fishing records and what you have unlocked in the fish guide</li>
+        <li>If you use the check-in (trip safety) feature: the date you shared, the spot, your planned return time and the time you reported you were back</li>
+        <li>If "Share anonymous catch stats" is on (the default): information for aggregation created from your catch records (fishing spot and nearby area, month, 3-hour time slot, whether you caught anything, species caught, target fish, fishing method, a trip-length band, and bands for tide, weather, forecast score, wind, rain and water temperature)</li>
+        <li>If you submit a photo of a fishing spot: the photo, the spot name, an optional display name, the date and time you agreed to publication, and an identifier used only for photo submissions to tell submitters apart</li>
+        <li>Location information of fishing spots, used to show tides, weather and nearby facilities</li>
+        <li>If you use notifications: whether notifications are allowed, and the notification schedule</li>
+        <li>If you use Premium: purchase status, subscription status and an anonymous user identifier</li>
+        <li>Usage information (screens viewed, how often features are used and similar) with an anonymous identifier, collected to improve the app</li>
+        <li>If you sign in to an account: the identifier linked to your sign-in method (Apple or Google), your email address and profile information such as a nickname</li>
+        <li>Information needed to deliver ads, count impressions and prevent fraud: approximate region estimated from your IP address, device information, advertising identifiers, ad view and interaction information, and diagnostic information</li>
+      </ul>
+
+      <h2>2. Where information is stored</h2>
+      <p>
+        Fishing records, favourite spots, check-in records, profile information, notification settings and similar data are mainly stored on your device.
+        Check-in records are kept on your device for about 7 days from the date you shared, and older records are cleared when you share again.
+        If you use the backup feature, your records are saved as a file in a location you choose.
+      </p>
+      <p>
+        If you sign in to an account and use data sync, or use cloud backup for catch photos,
+        that data is stored on servers of Firebase (Cloud Firestore / Cloud Storage), provided by Google.
+        If you use the app without signing in, your fishing records and favourite spots are not stored on these servers.
+      </p>
+      <p>
+        If you submit a photo of a fishing spot, the photo and your submission are stored in a private area awaiting review, and only photos approved by us are published in the app.
+        To check the history of the same submitter and prevent spam, we store in the review record an identifier used only for photo submissions, created on the server from your Firebase Authentication identifier.
+        We do not store the submitter's email address in the review record for fishing spot photos.
+      </p>
+      <p>
+        If "Share anonymous catch stats" is on in the app, only the following information from your catch records
+        (including records made before you turned this setting on) is sent to Firebase (Cloud Functions / Cloud Firestore):
+      </p>
+      <ul>
+        <li>the fishing spot and its nearby area</li>
+        <li>the month and a 3-hour time slot</li>
+        <li>whether you caught anything, and the species caught (only fish in the app's fish guide)</li>
+        <li>your target fish (only if chosen from the app's list) and fishing method (a category such as bait or lure)</li>
+        <li>a trip-length band (such as "under 30 minutes" or "6 hours or more"; exact minutes are not sent)</li>
+        <li>10-point bands for the tide, weather and forecast scores, and bands for wind, rain and water temperature (the original values are not sent)</li>
+      </ul>
+      <p>
+        Photos, notes, sizes, exact dates and times, your device's location, your name and any free text you typed are not sent.
+        The information is stored as counts combined with other users' records and, to review the statistics and check data quality,
+        also as a record for each trip that does not include the sender's identifier.
+        Even if you are not signed in to an account, an anonymous identifier is issued through Firebase Authentication in order to send this information.
+        This identifier is not treated as an account and is not used for signing in or syncing.
+        The aggregated data does not include the sender's identifier; only a separate one-way value is kept to prevent the same record from being counted twice.
+        This setting is on by default and can be turned off at any time in the settings on the Records tab. When you turn it off, sending stops and any information not yet sent is deleted from your device.
+        Records at New Zealand fishing spots are sent in the same way while this setting is on.
+      </p>
+      <p>
+        The aggregated results are shown in Premium as community catch trends for each fishing spot and its surrounding area.
+        In "Find spots by fish", we show areas where the selected fish has been recorded in the last 3 months including this month (free users see only the number of areas; Premium users see area names and fishing spots. Counts and numbers of people are not shown).
+        When there are few records, they are combined into an area wider than a fishing spot or into a whole season, and are never shown in a way that identifies the sender.
+        Your own records are not included in the aggregates shown on your own screen.
+        Community catches and "Find spots by fish" currently show results for Japanese fishing spots only.
+      </p>
+      <p>
+        When a Premium member shares a forecast ("Share forecast" or "Share fishing info"), the names of fish species caught at that spot or in the surrounding area (up to 3 species, without counts) are included in the shared link,
+        and are shown to people who open the link as information at the time of sharing. This display also contains no information that identifies the sender.
+      </p>
+
+      <h2>3. External services</h2>
+      <p>The app may use the following external services:</p>
+      <ul>
+        <li>Tide data for Japan: tide736.net</li>
+        <li>Tide data for New Zealand: tide predictions from Toitū Te Whenua Land Information New Zealand (LINZ). The predictions are included in the app or downloaded from our own server (Firebase Cloud Storage), so your information is not sent to LINZ.</li>
+        <li>Weather data: Open-Meteo</li>
+        <li>Nearby facilities: data based on OpenStreetMap and other sources</li>
+        <li>In-app purchases and subscription management: Apple App Store, Google Play, RevenueCat</li>
+        <li>Usage analysis: Firebase Analytics (Google)</li>
+        <li>Crash detection and analysis: Firebase Crashlytics (Google)</li>
+        <li>Advertising: Google AdMob</li>
+        <li>Account linking, data sync, catch photo backup and anonymous catch statistics: Firebase Authentication / Cloud Firestore / Cloud Storage / Cloud Functions (Google)</li>
+        <li>Account sign-in: Apple (Sign in with Apple), Google (Sign in with Google)</li>
+        <li>Fraud prevention: Firebase App Check (Apple App Attest / Google Play Integrity)</li>
+      </ul>
+      <p>
+        Location information of fishing spots, subscription status, anonymous identifiers and similar information may be sent to these external services to the extent needed to provide features.
+        The app does not directly collect or store payment information such as credit card numbers.
+      </p>
+      <p>
+        The providers of these external services (such as Google and RevenueCat) also have servers outside Japan,
+        so your information may be stored or processed in countries other than Japan and New Zealand.
+      </p>
+
+      <h2>4. How we use information</h2>
+      <ul>
+        <li>To show the chance of catching fish, tides, weather, wind and nearby facilities</li>
+        <li>To manage your fishing records, fish guide, favourite spots and profile</li>
+        <li>To check the purchase status of Premium and switch feature limits accordingly</li>
+        <li>To aggregate anonymous catch statistics and show which fish are being caught, and at what times, at each fishing spot</li>
+        <li>To create a guide to how likely you are to catch fish, such as the share of people who went and caught something</li>
+        <li>To review submitted fishing spot photos, and to check and limit spam from the same submitter</li>
+        <li>To show ads to free users, measure ad performance and prevent fraud</li>
+        <li>To investigate bugs, improve quality and improve the experience of using the app</li>
+      </ul>
+
+      <h2>5. Disclosure to third parties</h2>
+      <p>
+        Except where required by law, the app does not sell users' personal information to third parties.
+        However, information needed to provide features may be sent to each of the external services listed above.
+      </p>
+
+      <h2>6. Advertising</h2>
+      <p>
+        If you use the app for free, ads from Google AdMob are shown in the app.
+        Ads are not shown while you are using Premium.
+      </p>
+      <ul>
+        <li>To deliver ads, measure their performance and prevent fraud, information such as approximate region estimated from your IP address, device information, advertising identifiers, ad view and interaction information, and diagnostic information may be sent to Google and its advertising partners.</li>
+        <li>On iOS, the advertising identifier used across other companies' apps and websites (IDFA) is used only if you choose "Allow" on the device's tracking permission screen. If you do not allow tracking, you can still use all features of Sakana Switch.</li>
+        <li>On Android, you can delete or reset your advertising ID in your device's privacy settings.</li>
+        <li>In regions where it is required by law, you can review and change your consent in the app under "Ad privacy settings".</li>
+      </ul>
+      <p>
+        For how Google handles data, please see
+        <a href="https://policies.google.com/technologies/partner-sites">Google's Privacy &amp; Terms</a>.
+      </p>
+
+      <h2>7. Notifications</h2>
+      <p>
+        If you allow notifications, the app may send notifications, for example before good fishing times.
+        You can turn notifications off at any time in your device settings.
+      </p>
+      <p>
+        When you share with the check-in feature, a message containing the spot name and your planned return time is passed to the sharing app you choose on your device.
+        The operator of the app does not collect or manage who you share with, who receives the message or what it says.
+        This feature does not automatically notify third parties or check on your safety.
+      </p>
+
+      <h2>8. Deleting data</h2>
+      <p>
+        Data stored on your device can be deleted using the delete and restore options in the app, or by uninstalling the app.
+        Subscription and purchase history is managed by the App Store, Google Play and RevenueCat, so please check each service's account settings.
+      </p>
+      <p>
+        Information already sent as anonymous catch statistics is stored without any link to your account or the sender's identifier, so we cannot find and delete the part that came from a particular person.
+      </p>
+      <p>
+        Submitted fishing spot photos and their review records are managed separately from account sync data. To have them deleted, please contact our support address.
+      </p>
+
+      <h3 id="account-deletion">Deleting your account</h3>
+      <p>
+        An account created in Sakana Switch (provided by UMINOTE) by signing in with Apple or Google can be deleted in either of the following ways:
+      </p>
+      <ul>
+        <li>In the app: in the settings on the Records tab, go to "Account &amp; data protection" → "Sign in &amp; sync data" → "Delete account". You will be asked to sign in again to confirm it is you.</li>
+        <li>If you cannot use the app: email <a href="mailto:fishing1stg@gmail.com?subject=Account%20deletion%20request">fishing1stg@gmail.com</a> with the subject "Account deletion request", stating the sign-in method you used (Apple or Google) and your email address. After confirming your identity, we will delete your account within 30 days and let you know the result.</li>
+      </ul>
+      <p>When you delete your account, the following information is deleted from our servers:</p>
+      <ul>
+        <li>Account information (the identifier linked to your sign-in method, your email address and profile information such as a nickname)</li>
+        <li>Synced data such as fishing records and favourite spots</li>
+        <li>Catch photos backed up to the cloud</li>
+        <li>Group membership (you leave any groups you belong to)</li>
+      </ul>
+      <p>The following information is not deleted:</p>
+      <ul>
+        <li>Information already sent as anonymous catch statistics (combined counts and per-trip records without the sender's identifier, not linked to your account)</li>
+        <li>Subscription and purchase history (kept by the App Store, Google Play and RevenueCat under their own policies)</li>
+        <li>Usage analysis and crash information (deleted automatically according to the retention periods of Firebase Analytics / Crashlytics)</li>
+      </ul>
+      <p>Data stored on your device is deleted from the device at the same time as your account is deleted.</p>
+
+      <h3 id="access-correction">Access to and correction of your information</h3>
+      <p>
+        If you would like to see or correct information about you that the app stores, please contact us at the address below. We will respond after confirming your identity.
+        Information stored on your device can be viewed and edited by you in the app.
+      </p>
+      <p>
+        If you are in New Zealand and are not satisfied with our response, you can also make a complaint to the Office of the Privacy Commissioner
+        (<a href="https://www.privacy.org.nz/">privacy.org.nz</a>).
+      </p>
+
+      <h2>9. Use by minors</h2>
+      <p>
+        If you are a minor, please get your parent's or guardian's consent before using the app.
+      </p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>
+        This policy may be changed when necessary. We will announce important changes in the app or on this page.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        For questions about this policy, please email <a href="mailto:fishing1stg@gmail.com">fishing1stg@gmail.com</a>, or use the support contact listed on the App Store or Google Play.
+      </p>
+
+      <h2>12. Language</h2>
+      <p>
+        The Japanese version of this policy is the original. This English version is a translation for reference; if the two differ, the Japanese version prevails.
+      </p>
+    </article>
+  </main>
+</body>
+</html>
