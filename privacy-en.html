@@ -47,7 +47,7 @@
     <article>
       <p class="lang"><a href="./privacy.html" hreflang="ja" lang="ja">日本語</a> | English</p>
       <h1>Sakana Switch Privacy Policy</h1>
-      <p class="updated">Effective: 4 June 2026 / Last updated: 19 November 2026</p>
+      <p class="updated">Effective: 4 June 2026 / Last updated: 21 November 2026</p>
 
       <p class="note">
         Sakana Switch (魚スイッチ in Japanese) is an app that helps you plan fishing trips and keep a log of them.
@@ -61,6 +61,7 @@
         <li>If you use the check-in (trip safety) feature: the date you shared, the spot, your planned return time and the time you reported you were back</li>
         <li>If "Share anonymous catch stats" is on (the default): information for aggregation created from your catch records (fishing spot and nearby area, month, 3-hour time slot, whether you caught anything, species caught, target fish, fishing method, a trip-length band, and bands for tide, weather, forecast score, wind, rain and water temperature)</li>
         <li>If you submit a photo of a fishing spot: the photo, the spot name, an optional display name, the date and time you agreed to publication, and an identifier used only for photo submissions to tell submitters apart</li>
+        <li>Catch photos you submit as candidates for the "Community Catch Album", with the fish names in that record, the year and month of the catch, and the version of the wording you agreed to</li>
         <li>Location information of fishing spots, used to show tides, weather and nearby facilities</li>
         <li>If you use notifications: whether notifications are allowed, and the notification schedule</li>
         <li>If you use Premium: purchase status, subscription status and an anonymous user identifier</li>
@@ -84,6 +85,25 @@
         If you submit a photo of a fishing spot, the photo and your submission are stored in a private area awaiting review, and only photos approved by us are published in the app.
         To check the history of the same submitter and prevent spam, we store in the review record an identifier used only for photo submissions, created on the server from your Firebase Authentication identifier.
         We do not store the submitter's email address in the review record for fishing spot photos.
+      </p>
+      <h3 id="album">Community Catch Album</h3>
+      <p>
+        If you turn on "Submit this photo as a candidate for the Community Catch Album" for a photo in a catch record (it is off by default, and works the same for free and Premium users),
+        the photos in that record are sent to a private area in Firebase (Cloud Functions / Cloud Storage / Cloud Firestore).
+        We send only the photo, the fish names you recorded, the year and month of the catch, and the version of the wording you agreed to.
+        We do not send or store the spot name, location, exact date and time, size, notes, your name, email address, or any account or sign-in identifier.
+        Extra information embedded in the photo such as where it was taken (EXIF) is removed twice: when the image is re-encoded on your device, and again on our server before it is stored.
+      </p>
+      <p>
+        Candidate photos are stored where only the operator can see them. Each month the operator chooses about one photo per fish species.
+        Chosen photos are cropped to show only the fish, so that the spot, names and faces cannot be seen, and are published in the following month as the in-app "Community Catch Album".
+        Photos that are not chosen are deleted automatically on the 1st day of the second month after the catch (for example, November catches are deleted on 1 January).
+      </p>
+      <p>
+        You can withdraw at any time by turning the option off in the record editor, removing the photo, or deleting the record. When you withdraw, the photos you sent are deleted from our server.
+        Withdrawal uses a removal code that is saved in the record on your device when the photo is sent. If this code is lost because you delete the app or change devices,
+        you will no longer be able to withdraw from within the app, so please turn the option off before deleting the app. If the code has been lost, or you would like a photo removed from an album that has already been published, please contact us.
+        To send photos, an anonymous identifier is issued through Firebase Authentication even if you are not signed in, but it is not stored with the candidate photos (it is used only to limit how many photos can be sent in a short time).
       </p>
       <p>
         If "Share anonymous catch stats" is on in the app, only the following information from your catch records
@@ -151,6 +171,7 @@
         <li>To aggregate anonymous catch statistics and show which fish are being caught, and at what times, at each fishing spot</li>
         <li>To create a guide to how likely you are to catch fish, such as the share of people who went and caught something</li>
         <li>To review submitted fishing spot photos, and to check and limit spam from the same submitter</li>
+        <li>To choose from catch photos you agreed to share, crop out the fish, and publish them in the app as the "Community Catch Album"</li>
         <li>To show ads to free users, measure ad performance and prevent fraud</li>
         <li>To investigate bugs, improve quality and improve the experience of using the app</li>
       </ul>
@@ -202,6 +223,10 @@
       <p>
         Submitted fishing spot photos and their review records are managed separately from account sync data. To have them deleted, please contact our support address.
       </p>
+      <p>
+        Photos submitted as candidates for the "Community Catch Album" are stored without any link to your account, so deleting your account does not delete them automatically.
+        They are deleted when you turn the option off in the app. Photos that are not chosen are deleted automatically after the period described <a href="#album">above</a>.
+      </p>
 
       <h3 id="account-deletion">Deleting your account</h3>
       <p>
@@ -221,6 +246,7 @@
       <p>The following information is not deleted:</p>
       <ul>
         <li>Information already sent as anonymous catch statistics (combined counts and per-trip records without the sender's identifier, not linked to your account)</li>
+        <li>Photos submitted as candidates for the "Community Catch Album" (not linked to your account; to delete them, turn the option off in the app before deleting your account)</li>
         <li>Subscription and purchase history (kept by the App Store, Google Play and RevenueCat under their own policies)</li>
         <li>Usage analysis and crash information (deleted automatically according to the retention periods of Firebase Analytics / Crashlytics)</li>
       </ul>
